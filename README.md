@@ -1,7 +1,12 @@
 # NodeRedDocker
-Docker container for quickly setting up node red
+Docker container for quickly setting up Node Red.
 
-# To run node-red docker container:
+Install docker:
+[https://docs.docker.com/engine/install/](https://docs.docker.com/engine/install/)
+
+Install docker-compose: [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)
+
+# To run Node-Red docker container:
 
 ## 1. Clone repository:
 ```sh
