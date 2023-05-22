@@ -1,0 +1,35 @@
+version: "3.7"
+
+services:
+  nodered:
+    container_name: "NodeRed"
+    image: nodered/node-red
+    ports:
+      - "1880:1880"
+    expose:
+      - "1880"
+    networks:
+      - network1
+    volumes:
+      - volume1:/data
+
+  mosquitto:
+    image: eclipse-mosquitto
+    container_name: "MosquittoMQTT"
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    expose:
+      - "1883"
+    networks:
+      - network1
+    volumes:
+      - ./mosquitto/conf:/mosquitto/config
+      - ./mosquitto/data:/mosquitto/data
+      - ./mosquitto/log:/mosquitto/log
+
+volumes:
+  volume1:
+
+networks:
+  network1:
